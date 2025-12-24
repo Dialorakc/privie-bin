@@ -83,14 +83,14 @@ Device Drivers ---->
 > once i get it working, it would be ported to x11 and wayland, since they do not support direct fb access
 
 ## Usage
-###Available Vim Keybinds
+### Available Vim Keybinds
 > h, j, k, l (Navigation(left, down, up, right))
 > d (Delete line)
 > D (Delete to end of line)
 > w, q (write and quit)
 > t (open terminal mode)
 
-###Command-Line Flags
+### Command-Line Flags
 ```bash
 vie [OPTIONS] <filename>
 
@@ -99,13 +99,13 @@ Options:
   -T, --terminal     Launch in terminal mode
 ```
 
-##Testing & Feedback
+## Testing & Feedback
 This is beta software! Please report bugs and suggestions:
 
 - Issues: [GitHub Issues](https://github.com/Dialorakc/privie-bin/issues)
 - Discussions: [GitHub Discussions](https://github.com/Dialorakc/privie-bin/discussions)
 
-##Known Limitations
+## Known Limitations
 
 - Mainly tested in TTY (framebuffer mode)
 - Full X11 and Wayland support coming after TTY version is stable
@@ -115,7 +115,7 @@ This is beta software! Please report bugs and suggestions:
 Copyright © 2025 Dialor "Dialorakc" Emma. This project is licensed under the Privie Beta License(PBL) - see the [PBL License](LICENSE) file for details.
 Source code will be released under GPLv3 when v0.1 is reached.
 
-##Contributing
+## Contributing
 Not accepting code contributions yet (since source code is not public), but i welcome:
 
 - Bug reports
@@ -123,7 +123,7 @@ Not accepting code contributions yet (since source code is not public), but i we
 - Documentation improvements
 - Testing on different distributions
 
-##Acknowledgments
+## Acknowledgments
 Special thanks to:
 
 - The vim community for inspiration
