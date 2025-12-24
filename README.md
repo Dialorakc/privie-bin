@@ -48,8 +48,8 @@ Privie is a lightweight, fast text editor designed for the terminal with vim-sty
 
     vie <filename>
     ```
-    > [!NOTE]
-    > You may need to run it with sudo, depending on your distro.
+> [!NOTE]
+> You may need to run it with sudo, depending on your distro.
 #
 > [!IMPORTANT]
 > if you are on gentoo or compiled the kernel, ensure legacy /dev/fb* devices are enabled
@@ -78,6 +78,7 @@ Device Drivers ---->
 > sudo make install
 
 > Once done, update your grub and reboot
+> ```bash
 > sudo grub-mkconfig -o /boot/grub/grub.cfg
 > ```
 
