@@ -95,7 +95,7 @@ Device Drivers ---->
 
 ### Command-Line Flags
 ```bash
-vie [OPTIONS] <filename>
+vie [OPTIONS]
 
 Options:
   -V, --version      Display version information
@@ -115,7 +115,7 @@ This is beta software! Please report bugs and suggestions:
 - Limited vim keybindings in current version
 
 ## License
-Copyright © 2025 Dialor "Dialorakc" Emma. This project is licensed under the Privie Beta License(PBL) - see the [PBL License](LICENSE) file for details.
+Copyright © 2026 Dialor "Dialorakc" Emma. This project is licensed under the Privie Beta License(PBL) - see the [PBL License](LICENSE) file for details.
 Source code will be released under GPLv3 when v0.1 is reached.
 
 ## Contributing
