@@ -36,15 +36,15 @@ Privie is a lightweight, fast text editor designed for the terminal with vim-sty
     ```
     git clone https://github.com/Dialorakc/Privie.git
     cd Privie
-    chmod +x privie_v0.03(Wayland)
-    ./privie_v0.03(Wayland)
+    chmod +x privie_v0.03-1(Wayland)
+    ./privie_v0.03-1(Wayland)
     ```
     ```bash
     ## To install system-wide
     git clone https://github.com/Dialorakc/Privie.git
     cd Privie
-    chmod +x privie_v0.03(Wayland)
-    sudo mv privie_v0.03(Wayland) /usr/local/bin/vie
+    chmod +x privie_v0.03-1(Wayland)
+    sudo mv privie_v0.03-1(Wayland) /usr/local/bin/vie
 
     vie <filename>
     ```
@@ -98,7 +98,7 @@ Device Drivers ---->
 ```
 
 > [!NOTE]
-> if [*] or <*> (built-in) or <M> (module) is already present, it has been enabled and you can skip this step.
+> if [*] or <*> (built-in) or < M > (module) is already present, it has been enabled and you can skip this step.
 > Otherwise, press y to enable it and exit, make sure to save the new configuration
 
 ### Rebuild your Kernel
