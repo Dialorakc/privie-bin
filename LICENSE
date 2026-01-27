@@ -1,28 +1,40 @@
-Copyright (c) 2025 Dialor "Dialorakc" Emma
+Copyright (c) 2026 Dialor "Dialorakc" Emma
 
-PRIVIE BETA LICENSE (PBL)
+PRIVIE BETA LICENSE (PBL) - VERSION 2.0
 
-This software is currently in pre-release development.
-Binary distributions are provided for testing and feedback purposes only.
+1. PURPOSE
+This software is in a "Closed Source Beta" phase. The Author provides
+compiled binaries for evaluation and testing. Source code is
+Proprietary and Confidential.
 
-PERMISSIONS:
-You may:
-- Use the binaries for personal or commercial purposes
-- Report bugs and provide feedback
-- Test and evaluate the software
+2. GRANT OF LICENSE
+The Author grants you a personal, non-exclusive, non-transferable
+revocable license to execute the Software for personal or internal
+business evaluation.
 
-RESTRICTIONS:
-You may NOT:
-- Redistribute the binaries (in original or modified form)
-- Reverse engineer, decompile, or deassemble the software
-- Modify or create derivative works
-- Remove or alter any copyright notices
+3. RESTRICTIONS (THE "NO EXPLOIT" CLAUSE)
+You expressly agree NOT to:
+- Sublicense, sell, rent, lease, or distribute the Software to any third party.
+- Host the binary on any public server, mirror, or repository (e.g., GitHub, GitLab).
+- Reverse engineer, decompile, or attempt to derive the source code, except
+  where such restriction is expressly prohibited by law.
+- Create derivative works or "wrappers" around the binary for commercial resale.
+- Remove, obscure, or modify any copyright notices or digital signatures.
 
-DISCLAIMER:
-This software is provided "as is" without warranty of any kind.
+4. TERMINATION
+This license is effective until terminated. It terminates automatically if:
+- You fail to comply with any term herein.
+- The Author releases a newer version of the Software.
+- The Author moves the project to an Open Source (GPL) model.
+Upon termination, you must cease all use and destroy all copies of the Software.
 
-FUTURE LICENSING:
-Source code will be released under GPLv3 when the software
-reaches version 0.1 or stable release status.
+5. RESERVATION OF RIGHTS & FUTURE LICENSING
+The Author reserves the right to withdraw the Software from public
+availability at any time. The Author intends to re-license the
+Software under the GNU GPLv3 upon reaching version 0.10. Until that
+explicit transition, the Software remains Proprietary.
+
+6. DISCLAIMER
+THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND.
 
 For questions, contact: dialoremma@proton.me

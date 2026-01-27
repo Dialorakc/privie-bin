@@ -1,9 +1,9 @@
 # Privie
 Currently in beta. Source code will be released
-under GPL License when v0.1 is reached.
+under GPL License when v0.10 is reached.
 
      /\_/\
-    ( o.o )  privie v0.02
+    ( o.o )  privie v0.03
      > ⋈ <   (purr responsibly)
 
 *pronounced "prri-vie" if you're feeling fancy*
@@ -19,32 +19,32 @@ Privie is a lightweight, fast text editor designed for the terminal with vim-sty
 ## Installation guide
 1. Runtime Dependencies
     ```bash
-    # Arch/Manjaro
-    sudo pacman -S ncurses gcc-libs
+    # Arch
+    sudo pacman -S ncurses gcc-libs libdrm wayland libffi
 
     # Debian/Ubuntu
-    sudo apt install libncurses6 libtinfo6 libstdc++6
+    sudo apt install libncurses6 libtinfo6 libstdc++6 libdrm2 libwayland-client0 libffi8
 
     # Fedora
-    sudo dnf install ncurses-libs libstdc++
+    sudo dnf install ncurses-libs libstdc++ libdrm wayland-devel libffi
 
     # Gentoo
-    sudo emerge sys-libs/ncurses sys-devel/gcc
+    sudo emerge sys-libs/ncurses sys-devel/gcc x11-libs/libdrm dev-libs/wayland dev-libs/libffi
     ```
 
 2. Installation
     ```
     git clone https://github.com/Dialorakc/Privie.git
     cd Privie
-    chmod +x privie
-    ./privie
+    chmod +x privie_v0.03(Wayland)
+    ./privie_v0.03(Wayland)
     ```
     ```bash
     ## To install system-wide
     git clone https://github.com/Dialorakc/Privie.git
     cd Privie
-    chmod +x privie
-    sudo mv privie /usr/local/bin/vie
+    chmod +x privie_v0.03(Wayland)
+    sudo mv privie_v0.03(Wayland) /usr/local/bin/vie
 
     vie <filename>
     ```
@@ -67,8 +67,38 @@ Device Drivers ---->
             [*] Provide legacy /dev/fb* devices
 ```
 
+> Ensure your kernel has Direct Rendering Manager (DRM) enabled for your specific GPU (Intel, AMD, and Nvidia), for Wayland support
+
+```bash
+cd /usr/src/linux
+sudo make menuconfig
+```
+
+*Navigate with your arrow keys to*
+```
+Device Drivers ---->
+    Graphics support ---->
+        <*> Direct Rendering Manager (XFree86 4.1.0 and higher hardware support)
+```
+
+> Inside the DRM menu, select the driver for your specific hardware:
+
+```
+# For Intel Integrated Graphics
+    <*> Intel 8xx/9xx/G3x/G4x/HD Graphics
+
+# For AMD/Radeon
+    <*> Amdgpu (AMD GPU)
+
+# For NVIDIA (Open Source)
+    <*> Nouveau (NVIDIA)
+
+# For Virtual Machines (QEMU/KVM/VirtManager)
+    <*> Virtio GPU driver
+```
+
 > [!NOTE]
-> if [*] is already present, it has been enabled and you can skip this step.
+> if [*] or <*> (built-in) or <M> (module) is already present, it has been enabled and you can skip this step.
 > Otherwise, press y to enable it and exit, make sure to save the new configuration
 
 ### Rebuild your Kernel
@@ -82,16 +112,19 @@ Device Drivers ---->
 > sudo grub-mkconfig -o /boot/grub/grub.cfg
 > ```
 
+
 > everything is tested in the tty
 > once i get it working, it would be ported to x11 and wayland, since they do not support direct fb access
 
 ## Usage
 ### Available Vim Keybinds
-> h, j, k, l (Navigation(left, down, up, right))
-> d (Delete line)
-> D (Delete to end of line)
-> w, q (write and quit)
-> t (open terminal mode)
+> - h, j, k, l (Navigation(left, down, up, right))
+> - d (Delete line)
+> - D (Delete to end of line)
+> - a, i, A, I (write behind cursor, write a cusor position, write at the end of the line, write at the begining of the line)
+> - g, G (move to the top of the file, move to the bottom of the file)
+> - w, q (write and quit)
+> - ctrl + t (switch between editor and terminal)
 
 ### Command-Line Flags
 ```bash
@@ -100,6 +133,7 @@ vie [OPTIONS]
 Options:
   -V, --version      Display version information
   -T, --terminal     Launch in terminal mode
+  -h, --help         Display help with examples
 ```
 
 ## Testing & Feedback
@@ -111,12 +145,13 @@ This is beta software! Please report bugs and suggestions:
 ## Known Limitations
 
 - Mainly tested in TTY (framebuffer mode)
-- Full X11 and Wayland support coming after TTY version is stable
+- Currently working on Wayland support (minor bugs/errors are present)
+- Full X11 support coming after TTY and Wayland versions are stable
 - Limited vim keybindings in current version
 
 ## License
-Copyright © 2026 Dialor "Dialorakc" Emma. This project is licensed under the Privie Beta License(PBL) - see the [PBL License](LICENSE) file for details.
-Source code will be released under GPLv3 when v0.1 is reached.
+Copyright © 2026 Dialor "Dialorakc" Emma. This project is licensed under the PBL-2.0 License - see the [PBLv2 License](LICENSE) file for details.
+Source code will be released under GPLv3 when v0.10 is reached.
 
 ## Contributing
 Not accepting code contributions yet (since source code is not public), but i welcome:
